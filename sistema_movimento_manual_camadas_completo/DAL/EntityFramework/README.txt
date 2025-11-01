@@ -1,0 +1,1 @@
+Entity Framework implementation (see previous example).

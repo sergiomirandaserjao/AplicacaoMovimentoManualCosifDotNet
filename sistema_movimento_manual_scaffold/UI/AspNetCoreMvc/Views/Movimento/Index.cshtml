@@ -1,0 +1,36 @@
+@model IEnumerable<Domain.Entities.MovimentoManual>
+
+<h2>Movimentos</h2>
+
+<form method="get">
+    Mês: <input type="text" name="mes" /> Ano: <input type="text" name="ano" />
+    <button type="submit">Filtrar</button>
+</form>
+
+<table>
+    <thead><tr><th>Mês</th><th>Ano</th><th>Produto</th><th>Nr Lanç</th><th>Descrição</th><th>Valor</th></tr></thead>
+    <tbody>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.DatMes</td>
+            <td>@item.DatAno</td>
+            <td>@item.CodProduto</td>
+            <td>@item.NumLancamento</td>
+            <td>@item.DesDescricao</td>
+            <td>@item.ValValor</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<form asp-action="Create" method="post">
+    <h3>Novo</h3>
+    Mês: <input name="DatMes" /><br />
+    Ano: <input name="DatAno" /><br />
+    CodProduto: <input name="CodProduto" /><br />
+    CodCosif: <input name="CodCosif" /><br />
+    Valor: <input name="ValValor" /><br />
+    Descrição: <textarea name="DesDescricao"></textarea><br />
+    <button type="submit">Incluir</button>
+</form>

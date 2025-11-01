@@ -1,0 +1,3 @@
+{
+  "DefaultConnection": "Server=YOUR_SERVER;Database=YOUR_DB;Trusted_Connection=True;"
+}

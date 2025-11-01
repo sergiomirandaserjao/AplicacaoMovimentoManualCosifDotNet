@@ -1,0 +1,1 @@
+NHibernate implementation (see previous example).
